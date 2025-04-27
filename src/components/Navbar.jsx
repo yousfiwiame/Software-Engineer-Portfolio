@@ -22,7 +22,7 @@ export default function Navbar() {
             { title: "Projets", link: "work", type: "scroll" },
             { title: "Contact", link: "contact", type: "scroll" },
             {
-                title: "Curriculum vitae", link: "/portfolio-for-software-developer/monCV.pdf"
+                title: "Curriculum vitae", link: "/monCV.pdf"
                 , type: "external"
             } // Type "external" pour ouvrir le PDF
         ],
@@ -30,7 +30,7 @@ export default function Navbar() {
             { title: "About Me", link: "about", type: "scroll" },
             { title: "Projects", link: "work", type: "scroll" },
             { title: "Contact", link: "contact", type: "scroll" },
-            { title: "Curriculum vitae", link: "/portfolio-for-software-developer/Resume.pdf", type: "external" }
+            { title: "Curriculum vitae", link: "/Resume.pdf", type: "external" }
         ]
     };
 

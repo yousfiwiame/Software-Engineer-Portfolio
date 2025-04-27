@@ -57,7 +57,7 @@ export default function HomeLayout() {
               </div>
               <div className="button resume">
                 <a
-                  href={`/portfolio-for-software-developer/${language === 'fr' ? 'monCV.pdf' : 'Resume.pdf'}`}
+                  href={`/${language === 'fr' ? 'monCV.pdf' : 'Resume.pdf'}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
