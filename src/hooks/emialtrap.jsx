@@ -20,7 +20,7 @@ export const ContactUs = () => {
       Error: "Une erreur s'est produite lors de l'envoi de votre message.",
     },
     en: {
-      Name: "Your Name",  
+      Name: "Your Name",
       Email: "Your Email",
       Subject: "Subject",
       Message: "Your message",
@@ -33,53 +33,55 @@ export const ContactUs = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_gihwzmm', 'template_ena34uq', form.current, 'NBX_MdZPfoh0FbtcW')
+    emailjs.sendForm('service_qbfheqq', 'template_zn2uypt', form.current, 'wStumSyiEZsdsD6W3')
       .then((result) => {
-          console.log(result.text);
-          toast.success(emailPath[language].Success, {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-          });
-          e.target.reset();
+        console.log(result.text);
+        toast.success(emailPath[language].Success, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        e.target.reset();
       }, (error) => {
-          console.log(error.text);
-          toast.error(emailPath[language].Error, {
-              position: "top-right",
-              autoClose: 5000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-          });
+        console.log(error.text);
+        toast.error(emailPath[language].Error, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
       });
   };
 
   return (
     <>
-        <form ref={form} onSubmit={sendEmail}>
+      <form ref={form} onSubmit={sendEmail}>
         <div className="top">
-            <input type="text" name="user_name" placeholder={emailPath[language].Name} required/>
-            <input type="email" name="user_email" placeholder={emailPath[language].Email} required />
+          <input type="text" name="user_name" placeholder={emailPath[language].Name} required />
+          <input type="email" name="user_email" placeholder={emailPath[language].Email} required />
         </div>
-            <div className="middle">
-                <input type="text" name="from_name" placeholder={emailPath[language].Subject} required/>
-            </div>
-            <div className="bottom">
-                <textarea name="message" placeholder={emailPath[language].Message} required></textarea>
-            </div>
-            <div className="button">
-            <input type="submit" value={emailPath[language].Send} />
-            </div>                                   
-        </form>
-        <ToastContainer />
+        <div className="middle">
+          <input type="text" name="subject" placeholder={emailPath[language].Subject} required />
+          {/* Remplacer from_name par subject ici */}
+        </div>
+        <div className="bottom">
+          <textarea name="message" placeholder={emailPath[language].Message} required></textarea>
+        </div>
+        <div className="button">
+          <input type="submit" value={emailPath[language].Send} />
+        </div>
+      </form>
+
+      <ToastContainer />
     </>
   );
 };
