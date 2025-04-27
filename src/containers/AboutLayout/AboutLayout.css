@@ -1,0 +1,188 @@
+/* Style général du conteneur */
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Titre principal */
+  .about-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  /* Conteneur des colonnes */
+  .about-content {
+    display: flex;
+    position: relative;
+  }
+  
+  /* Style commun aux colonnes */
+  .about-column {
+    width: 50%;
+    padding: 0 20px;
+  }
+  
+  /* Colonne gauche spécifique */
+  .left-column {
+    padding-right: 30px;
+  }
+  
+  /* Colonne droite spécifique */
+  .right-column {
+    padding-left: 30px;
+  }
+  
+  /* Séparateur vertical entre les colonnes */
+  .about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: #ddd;
+    transform: translateX(-50%);
+  }
+  
+  /* Styles des paragraphes */
+  .left-column p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  /* Titre de la colonne */
+  .column-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Timeline éducation */
+  .education-timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  /* Ligne verticale de la timeline */
+  .education-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 4px;
+    background: linear-gradient(to bottom, #ff4d4d, #ff0000);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  }
+  
+  /* Élément de la timeline */
+  .education-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+  }
+  
+  /* Point sur la timeline */
+  .timeline-dot {
+    position: absolute;
+    left: -13.5px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 3px solid #ff0000;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+  }
+  
+  /* Logo de l'institution */
+  .education-logo {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ff0000;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    margin-left: 25px;
+    z-index: 1;
+  }
+  
+  .education-logo img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+  
+  /* Détails de l'éducation */
+  .education-details {
+    flex-grow: 1;
+  }
+  
+  .education-period {
+    font-weight: 700;
+    color: #ff0000;
+    margin-bottom: 5px;
+  }
+  
+  .education-institution {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .education-degree {
+    color: #666;
+  }
+  
+  /* Responsive pour les mobiles */
+  @media screen and (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+    }
+    
+    .about-column {
+      width: 100%;
+      padding: 0;
+    }
+    
+    .left-column {
+      margin-bottom: 30px;
+    }
+    
+    .about-content::before {
+      display: none;
+    }
+    
+    .right-column {
+      padding-top: 30px;
+      border-top: 1px solid #ddd;
+    }
+    
+    .education-timeline {
+      padding-left: 40px;
+    }
+    
+    .education-timeline::before {
+      left: 20px;
+    }
+    
+    .timeline-dot {
+      left: 14px;
+    }
+  }

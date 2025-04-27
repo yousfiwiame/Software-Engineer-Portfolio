@@ -1,0 +1,164 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+/* Variables CSS pour utiliser les couleurs du thème */
+:root {
+  --primary-color: #D32F2F;
+  --primary-light: #FF6659;
+  --primary-dark: #9A0007;
+  --secondary-color: #FFFFFF;
+  --bg-color: #FFFFFF;
+  --text-primary: #333333;
+  --text-secondary: #757575;
+  --accent-color: #B71C1C;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--primary-color));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em var(--primary-light));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.read-the-docs {
+  color: var(--text-secondary);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Styles pour les boutons */
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Style pour le bouton de changement de langue */
+.language-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  padding: 8px 16px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  border: 2px solid white;
+}
+
+/* Styles pour les sections */
+.section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.section-title {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* Style global pour le bouton de langue */
+.language-toggle-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.language-toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Style de l'en-tête */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #333;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1000;
+}
+
+.App {
+  padding-top: 60px; /* Pour compenser l'espace occupé par l'en-tête */
+}
